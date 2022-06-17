@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+}
+
+
+$white: white;
+$black: black;
+$red: red;
+$green :green;
+
+.carousel-control-color{
+    color: green;
+}
+.carousel-control-prev-icon{
+    color: green;
+
+}
+
+
+.carousel-item {
+    transition-duration: 3s;
+  }
+
+
+.transform {
+    transition: 5s ease-out 5s ease-in 1s ease-in-out;
+    opacity: 90%;
+}
+
+.carouse-fade{
+    transition-duration:  2.5s;
+    opacity: 10%;
+}
+
+.carousel-control{
+    color: green;
+}
+
+.carousel-control-next-icon{
+    background-color: green;
+    border-radius: 8px;
+
+}
+
+.carousel-control-prev-icon{
+    background-color: green;
+    border-radius: 8px;
+
+}
+
+
+.carousel-control-prev-icon:hover{
+    background-color: rgb(0, 2, 128);
+    border-radius: 8px;
+
+}
+
+
+.carousel-control-next-icon:hover{
+    background-color: rgb(0, 2, 128);
+    border-radius: 8px;
+
+}
