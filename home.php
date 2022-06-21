@@ -8,7 +8,7 @@ get_header();
 
 <div class="container-fluid text-center">
 
-    <h1>Home</h1>
+    <h1 class="header__homepage">Home</h1>
     <?php 
     include('inc/slider.php');
 
@@ -26,7 +26,8 @@ get_header();
             <a href="<?php the_permalink() ?>">
                 <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px"
                     src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
-                <p style="float:right;"><?php echo the_title(); ?></br>
+                <p style="float:right;">
+                <?php echo the_title(); ?></br>
                     <?php the_time('l, F jS, Y'); ?></p>
             </a>
         </div>

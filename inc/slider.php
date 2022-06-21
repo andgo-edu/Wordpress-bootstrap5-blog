@@ -31,10 +31,10 @@ get_header();
                             'style' => 'max-width:900px;max-height:500px; object-fit:cover;'
                         )); ?>
                     </a>
-                    <a href="<?php the_permalink() ?>">
+                    <a class="h5__sliderLink" href="<?php the_permalink() ?>">
 
                         <div class="carousel-caption d-none d-md-block">
-                            <h5><?php the_title(); ?></h5>
+                            <h5 class="h5__slider"><?php the_title(); ?></h5>
                     </a>
 
                     </div>

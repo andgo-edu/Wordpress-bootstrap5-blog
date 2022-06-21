@@ -21,9 +21,9 @@ wp_head();
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+<div class="sass__ul__nav">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-items-sass">
           <?php
           wp_nav_menu(array(
             'theme_location' => 'Andgo ',
@@ -34,6 +34,8 @@ wp_head();
           ?>
         </li>
       </ul>
+</div>
+      
         
     </div>
   </div>

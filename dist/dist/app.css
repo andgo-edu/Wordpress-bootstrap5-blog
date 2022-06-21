@@ -1,5 +1,78 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+/* ---- Base Rules ---- */
 body {
-  background-color: black;
+  color: white;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+
+/* Typeography General*/
+p {
+  color: rgb(17, 17, 17);
+}
+
+.header__homepage {
+  background: -webkit-linear-gradient(rgb(2, 196, 255), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.h5__slider {
+  background: -webkit-linear-gradient(rgb(2, 196, 255), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.3rem;
+}
+
+/* ---- Layout Rules ---- */
+.page_item > a {
+  color: black;
+  list-style: none;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-in-out;
+  display: inline;
+  float: left;
+}
+
+.page_item > a:hover {
+  background: -webkit-linear-gradient(rgb(4, 181, 235), rgb(121, 121, 121));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+  float: left;
+}
+
+/* ---- Module Rules ---- */
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+/* Section Active Styles Keyframe Animations */
+.carousel-item {
+  transition-duration: 1s;
+}
+
+.transform {
+  transition: 5s ease-in-out;
+}
+
+.carousel-fade {
+  transition: 1s ease-in-out;
+  opacity: 90%;
+}
+
+.carousel-control {
+  color: green;
 }
 
 .carousel-control-color {
@@ -7,33 +80,6 @@ body {
 }
 
 .carousel-control-prev-icon {
-  color: green;
-}
-
-a {
-  color: rgb(145, 145, 145);
-}
-
-h1 {
-  color: whitesmoke;
-  font-size: 5rem;
-}
-
-.carousel-item {
-  transition-duration: 1s;
-}
-
-.transform {
-  transition: 1s ease-in-out;
-  opacity: 10%;
-}
-
-.carousel-fade {
-  transition-duration: 2.5s;
-  opacity: 10%;
-}
-
-.carousel-control {
   color: green;
 }
 
