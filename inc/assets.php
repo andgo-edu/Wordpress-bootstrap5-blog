@@ -13,7 +13,7 @@ function andgo_theme_scripts(){
 
 //assets\vendor\gsap.min.js
 
-wp_register_script('gsap.min.js', get_template_directory_uri() . '/assets/vendor/gsap.min.js', [], 1, true);
+wp_register_script('gsap.min.js', get_template_directory_uri() . '/assets/vendor/gsap/js/gsap.min.js', array(), false, true );
 wp_enqueue_script('gsap.min.js');
 }
 

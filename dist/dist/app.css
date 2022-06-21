@@ -10,16 +10,25 @@ body {
   color: green;
 }
 
+a {
+  color: rgb(145, 145, 145);
+}
+
+h1 {
+  color: whitesmoke;
+  font-size: 5rem;
+}
+
 .carousel-item {
-  transition-duration: 3s;
+  transition-duration: 1s;
 }
 
 .transform {
-  transition: 5s ease-out 5s ease-in 1s ease-in-out;
-  opacity: 90%;
+  transition: 1s ease-in-out;
+  opacity: 10%;
 }
 
-.carouse-fade {
+.carousel-fade {
   transition-duration: 2.5s;
   opacity: 10%;
 }
