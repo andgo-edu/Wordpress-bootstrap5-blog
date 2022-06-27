@@ -7,10 +7,7 @@
   \*************************/
 /***/ (() => {
 
-console.log("Hello we just installed laravel mix successfully and now wre compiling the java script");
-var myCarousel = document.getElementById('myCarousel');
-myCarousel.addEventListener('slide.bs.carousel', function (event) {// do something...
-});
+
 
 /***/ }),
 

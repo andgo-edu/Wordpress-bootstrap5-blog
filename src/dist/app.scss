@@ -77,11 +77,8 @@ p {
 
 
 /* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 
 
-/* Section Active Styles Keyframe Animations */
 
 
 .carousel-item {
@@ -135,6 +132,8 @@ p {
 
 
 
-
+.box {
+  display: block;
+}
 
 

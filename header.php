@@ -1,7 +1,9 @@
 <?php
 wp_head();
 ?>
-<!DOCTYPE html>
+
+
+<!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 
 <head>

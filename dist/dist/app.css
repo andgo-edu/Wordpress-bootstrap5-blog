@@ -55,9 +55,6 @@ p {
 
 /* ---- Module Rules ---- */
 /* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-/* Section Active Styles Keyframe Animations */
 .carousel-item {
   transition-duration: 1s;
 }
@@ -101,4 +98,8 @@ p {
 .carousel-control-next-icon:hover {
   background-color: rgb(0, 2, 128);
   border-radius: 8px;
+}
+
+.box {
+  display: block;
 }
