@@ -15,9 +15,9 @@ function andgo_theme_scripts(){
 //from  https://greensock.com/ 
 
 wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js', array(), false, true );
-wp_enqueue_script('gsap'); // This is probably not needed since below we are enqueueing the gsap-settings file with has a dependency on the gsap script, so it should enqueue both
+wp_enqueue_script('gsap'); 
 
- /*-enqueue laravelmix js script start -*/
+ /*-wp register script  -*/
  wp_register_script('gsap-custom.js', get_template_directory_uri() . '/assets/vendor/gsap/js/gsap-custom.js', [], 1, true);
  wp_enqueue_script('gsap-custom.js');
 

@@ -7,14 +7,22 @@ get_header();
 
 ?>
 
-
 <style>
-  body {
-  margin: 10px;
-}
+  .green{
+    background-color: green;
+  }
 
+  .orange {
+    background-color: orange;
 
+  }
+
+  .grey {
+    background-color: grey;
+
+  }
   </style>
+
 
 
 
@@ -28,34 +36,11 @@ get_header();
 
 
 
-<script>
-
-
-CSSPlugin.defaultTransformPerspective = 400; 
-
-gsap.to(".green", {duration: 3, rotationX: 360});
-gsap.to(".orange", {duration: 3, rotationY: 360});
-gsap.to(".grey", {duration: 3, x: 100, y: 100, scale: 2, skewX: 45, rotation: 180});
-
-
-
-  </script>
-
-
-
-
-
 
 
 
 
 <?php
-echo "the about us is now working";
-
-
-
-
-
 
 get_footer();
 
