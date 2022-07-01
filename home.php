@@ -2,17 +2,77 @@
 get_header();
 ?>
 
-<div class="container-fluid text-center">
-    <h1 class="header__homepage">Home</h1>
-    <?php 
-    include('inc/slider.php');
-    if (have_posts()) :
-        while (have_posts()) : the_post();
-            // Your loop code
-    ?>
+<style>
+    /* #placeholder1 {
+  height: 100vh;
+  background-color: grey;
+} */
 
-    <div class="gsap__easeinOut">
-        <div class="col-md-6 gx-5">
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.section {
+  height: 100%;
+  width: calc(100% / 5);
+  float: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section:nth-child(1) {
+  background: #262626;
+}
+.section:nth-child(2) {
+  background: #22a7f0;
+}
+.section:nth-child(3) {
+  background: #f9690e;
+}
+.section:nth-child(4) {
+  background: #9b59b6;
+}
+.section:nth-child(5) {
+  background: #03c9a9;
+}
+.sections {
+  width: 500%;
+  height: 100%;
+}
+.sectionTitle {
+  font-size: 30px;
+  color: #fff;
+}
+
+    </style>
+
+
+
+
+
+
+
+
+
+<div class="wrapper" id="js-wrapper">
+  <div class="sections" id="js-slideContainer">
+    <section class="section">
+      <span class="sectionTitle" id="title1">   <?php 
+include('inc/slider.php');
+?> </span>
+    </section>
+ 
+      <?php
+if (have_posts()) :
+    while (have_posts()) : the_post();
+        // Your loop code
+?>
+   <section class="section">
+      <span class="sectionTitle" id="title2"></span>
+<div class="col-md-6 gx-5">
             <a href="<?php the_permalink() ?>">
                 <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px"
                     src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
@@ -22,12 +82,16 @@ get_header();
                 </span>
             </a>
         </div>
-    </div>
-
+      
+    </section>
     <?php endwhile;;
         ?>
     <?php endif;
     ?>
+  </div>
+</div>
+
+   
 </div>
 
 
@@ -57,32 +121,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+TweenLite.defaultEase = Linear.easeNone;
+var titles = document.querySelectorAll(".sectionTitle");
+var controller = new ScrollMagic.Controller();
+var tl = new TimelineMax();
+
+// create timeline
+// this could also be created in a loop
+tl.to("#js-slideContainer", 1, {xPercent: -20}, "label1");
+tl.from(titles[1], 0.5, {opacity:0}, "label1+=0.5");
+tl.to("#js-slideContainer", 1, {xPercent: -40}, "label2");
+tl.from(titles[2], 0.5, {opacity:0}, "label2+=0.5");
+tl.to("#js-slideContainer", 1, {xPercent: -60}, "label3");
+tl.from(titles[3], 0.5, {opacity:0}, "label3+=0.5");
+tl.to("#js-slideContainer", 1, {xPercent: -80}, "label4");
+tl.from(titles[4], 0.5, {opacity:0}, "label4+=0.5");
 
 
+new ScrollMagic.Scene({
+  triggerElement: "#js-wrapper",
+  triggerHook: "onLeave",
+  duration: "400%"
+})
+  .setPin("#js-wrapper")
+  .setTween(tl)
+  .addIndicators({
+    colorTrigger: "white",
+    colorStart: "white",
+    colorEnd: "white",
+  })
+  .addTo(controller);
 
-
-
-
-// "to" tween (animate to provided values)
-gsap.to("gsap__easeinOut.div", { // selector text, Array, or object
-    x: 100, // any properties (not limited to CSS)
-    backgroundColor: "red", // camelCase
-    duration: 1, // seconds
-    delay: 0.5,
-    ease: "power2.inOut",
-    stagger: 0.1, // stagger start times
-    paused: true, // default is false
-    overwrite: "auto", // default is false
-    repeat: 2, // number of repeats (-1 for infinite)
-    repeatDelay: 1, // seconds between repeats
-    repeatRefresh: true, // invalidates on each repeat
-    yoyo: true, // if true > A-B-B-A, if false > A-B-A-B
-    yoyoEase: true, // or ease like "power2"
-    immediateRender: false,
-    onComplete: myFunc,
-    // other callbacks: 
-    // onStart, onUpdate, onRepeat, onReverseComplete
-    // Each callback has a params property as well
-    // i.e. onUpdateParams (Array)
-});
+  
 </script>

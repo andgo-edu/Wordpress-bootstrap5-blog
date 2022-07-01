@@ -11,13 +11,34 @@ function andgo_theme_scripts(){
   wp_enqueue_script('app.js');
   /*-enqueue laravelmix js script  end -*/
 
-//assets\vendor\gsap.min.js
+//
 //from  https://greensock.com/ 
 
 wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js', array(), false, true );
 wp_enqueue_script('gsap'); 
 
- /*-wp register script  -*/
+  /***Gsap Aniamtion PLugins */
+ //TweenMax
+ wp_register_script( 'TweenMax.min.js','https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', array(), false, true );
+ wp_enqueue_script('TweenMax.min.js'); 
+
+//scroll Magic
+ wp_register_script( 'ScrollMagic.min.js','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array(), false, true );
+ wp_enqueue_script('ScrollMagic.min.js'); 
+
+//animation Plugin
+
+ wp_register_script( 'animation.gsap.min.js','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', array(), false, true );
+ wp_enqueue_script('animation.gsap.min.js'); 
+
+//animation Plugin
+
+ wp_register_script( 'debug.addIndicators.min.js','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', array(), false, true );
+ wp_enqueue_script('debug.addIndicators.min.js'); 
+
+
+
+ /*-wp register script for custom js -*/
  wp_register_script('gsap-custom.js', get_template_directory_uri() . '/assets/vendor/gsap/js/gsap-custom.js', [], 1, true);
  wp_enqueue_script('gsap-custom.js');
 
