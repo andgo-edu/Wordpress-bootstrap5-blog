@@ -34,25 +34,5 @@
 <body>
 
     <style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
 
-    }
-
-    .top-nav-bar {}
-
-    .top-nav-bar>li {
-        display: inline;
-        float: left;
-
-    }
-
-    .top-nav-bar>a {
-        display: block;
-        padding: 8px;
-        background-color: #dddddd;
-
-    }
     </style>

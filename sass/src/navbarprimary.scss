@@ -3,15 +3,21 @@
 
 .top-nav-bar > li {
   display: flex;
-  word-spacing: 1.0rem;
   float: left;
-
+justify-content: space-evenly;
 }
 
 .top-nav-bar > a {
   display: block;
   padding: 8px;
   background-color: #dddddd;
+  justify-content: space-evenly;
+
+}
+
+.nav-items-sass{
+  word-spacing: 0.5rem;
+  display: block;
 }
 
 .page_item > a {
@@ -22,8 +28,8 @@
   -webkit-text-fill-color: transparent;
   transition: 0.5s ease-in-out;
   display: inline;
-  float: left;
-  word-spacing: 1.0rem;
+  text-align: center;
+  justify-content: space-evenly;
 
 }
 

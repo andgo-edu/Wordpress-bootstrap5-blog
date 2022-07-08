@@ -8,11 +8,23 @@
  *
 */
 
+
+
+
 /* ---- Base Rules ---- */
 body {
   color: white;
   background-color: #000000;
   background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
 }
 
 /* Typeography General*/
@@ -39,24 +51,7 @@ p {
 
 /* ---- Layout Rules ---- */
 
-.page_item > a {
-  color: black;
-  list-style: none;
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.5s ease-in-out;
-  display: inline;
-  float: left;
-}
 
-.page_item > a:hover {
-  background: -webkit-linear-gradient(rgb(4, 181, 235), rgb(121, 121, 121));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline;
-  float: left;
-}
 
 /* ---- Module Rules ---- */
 
@@ -109,3 +104,6 @@ p {
 .box {
   display: block;
 }
+
+
+@import './navbarprimary.scss';
