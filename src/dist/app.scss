@@ -1,0 +1,111 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+/* ---- Base Rules ---- */
+body {
+  color: white;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+
+/* Typeography General*/
+h1 {
+}
+
+p {
+  color: rgb(17, 17, 17);
+}
+
+.header__homepage {
+  background: -webkit-linear-gradient(rgb(2, 196, 255), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.h5__slider {
+  background: -webkit-linear-gradient(rgb(2, 196, 255), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.3rem;
+}
+
+/* ---- Layout Rules ---- */
+
+.page_item > a {
+  color: black;
+  list-style: none;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-in-out;
+  display: inline;
+  float: left;
+}
+
+.page_item > a:hover {
+  background: -webkit-linear-gradient(rgb(4, 181, 235), rgb(121, 121, 121));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+  float: left;
+}
+
+/* ---- Module Rules ---- */
+
+/* ---- Theme State Rules ---- */
+
+.carousel-item {
+  transition-duration: 1s;
+}
+
+.transform {
+  transition: 5s ease-in-out;
+}
+
+.carousel-fade {
+  transition: 1s ease-in-out;
+  opacity: 90%;
+}
+
+.carousel-control {
+  color: green;
+}
+
+.carousel-control-color {
+  color: green;
+}
+.carousel-control-prev-icon {
+  color: green;
+}
+
+.carousel-control-next-icon {
+  background-color: green;
+  border-radius: 8px;
+}
+
+.carousel-control-prev-icon {
+  background-color: green;
+  border-radius: 8px;
+}
+
+.carousel-control-prev-icon:hover {
+  background-color: rgb(0, 2, 128);
+  border-radius: 8px;
+}
+
+.carousel-control-next-icon:hover {
+  background-color: rgb(0, 2, 128);
+  border-radius: 8px;
+}
+
+.box {
+  display: block;
+}
