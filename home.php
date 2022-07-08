@@ -16,6 +16,7 @@ get_header();
 
 .section {
     height: 100%;
+    max-height: 100vh;
     width: calc(100% / 5);
     float: left;
     position: relative;
@@ -57,36 +58,42 @@ get_header();
 
 <div class="wrapper" id="js-wrapper">
     <div class="sections" id="js-slideContainer">
-      
+
         <section class="section">
-            <span class="sectionTitle" id="title1"> <?php 
-include('inc/slider.php');
-?> </span>
+            <span class="sectionTitle" id="title1"> <?php
+                                                    include('inc/slider.php');
+                                                    ?> </span>
         </section>
 
         <?php
-if (have_posts()) :
-    while (have_posts()) : the_post();
-        // Your loop code
-?>
+        if (have_posts()) :
+            while (have_posts()) : the_post();
+                // Your loop code
+        ?>
         <section class="section">
             <span class="sectionTitle" id="title2"></span>
             <div class="col-md-6 gx-5">
                 <a href="<?php the_permalink() ?>">
-                    <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px"
+                    <img class="img-fluid rounded-4 shadow-5-strong"
+                        style="max-height:1000px; max-width:1000px; width:100%; height:100%; min-width:250px; min-height:250px; object-fit:cover;"
                         src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
-                    <span href="<?php the_permalink() ?>" style="float:right;">
+                    <h3>
                         <?php echo the_title(); ?></br>
+
+                    </h3>
+                    </br>
+                    <h4>
                         <?php the_time('l, F jS, Y'); ?>
-                    </span>
+
+                    </h4>
                 </a>
             </div>
 
         </section>
         <?php endwhile;;
-        ?>
+            ?>
         <?php endif;
-    ?>
+        ?>
     </div>
 </div>
 
@@ -106,7 +113,9 @@ get_footer();
 // 
 
 // wait until DOM is ready
-document.addEventListener("DOMContentLoaded", function(event) {
+/**Debug 
+ * 
+ * document.addEventListener("DOMContentLoaded", function(event) {
 
     console.log("DOM loaded");
 
@@ -120,6 +129,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+ * 
+ * 
+*/
 TweenLite.defaultEase = Linear.easeNone;
 var titles = document.querySelectorAll(".sectionTitle");
 var controller = new ScrollMagic.Controller();
@@ -154,18 +166,18 @@ tl.from(titles[4], 0.5, {
 
 
 new ScrollMagic.Scene({
-  //triggers the div element  
-  triggerElement: "#js-wrapper",
-  //hook for the animation scroll
+        //triggers the div element  
+        triggerElement: "#js-wrapper",
+        //hook for the animation scroll
         triggerHook: "onLeave",
         duration: "400%"
     })
     .setPin("#js-wrapper")
     .setTween(tl)
     .addIndicators({
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white",
+        colorTrigger: "transparent",
+        colorStart: "transparent",
+        colorEnd: "transparent",
     })
     .addTo(controller);
 </script>

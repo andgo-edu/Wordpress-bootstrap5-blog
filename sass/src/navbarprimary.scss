@@ -1,0 +1,34 @@
+.top-nav-bar {
+}
+
+.top-nav-bar > li {
+  display: flex;
+  word-spacing: 1.0rem;
+  float: left;
+
+}
+
+.top-nav-bar > a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+.page_item > a {
+  color: black;
+  list-style: none;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-in-out;
+  display: inline;
+  float: left;
+  word-spacing: 1.0rem;
+
+}
+
+.page_item > a:hover {
+  background: -webkit-linear-gradient(rgb(4, 181, 235), rgb(121, 121, 121));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

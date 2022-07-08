@@ -3,61 +3,60 @@
 
 
 // Register Theme Scripts
-function andgo_theme_scripts(){
-    wp_enqueue_script('bootstrap.bundle.js', get_template_directory_uri(). '/assets/js/bootstrap.bundle.js');
+function andgo_theme_scripts()
+{
+  wp_enqueue_script('bootstrap.bundle.js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.js');
 
   /*-enqueue laravelmix js script start -*/
-  wp_register_script('app.js', get_template_directory_uri() . '/dist/app.js', [], 1, true);
+  wp_register_script('app.js', get_template_directory_uri() . '/sass/dist/app.js', [], 1, true);
   wp_enqueue_script('app.js');
   /*-enqueue laravelmix js script  end -*/
 
-//
-//from  https://greensock.com/ 
+  //
+  //from  https://greensock.com/ 
 
-wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js', array(), false, true );
-wp_enqueue_script('gsap'); 
+  wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js', array(), false, true);
+  wp_enqueue_script('gsap');
 
   /***Gsap Aniamtion PLugins */
- //TweenMax
- wp_register_script( 'TweenMax.min.js','https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', array(), false, true );
- wp_enqueue_script('TweenMax.min.js'); 
+  //TweenMax
+  wp_register_script('TweenMax.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', array(), false, true);
+  wp_enqueue_script('TweenMax.min.js');
 
-//scroll Magic
- wp_register_script( 'ScrollMagic.min.js','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array(), false, true );
- wp_enqueue_script('ScrollMagic.min.js'); 
+  //scroll Magic
+  wp_register_script('ScrollMagic.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array(), false, true);
+  wp_enqueue_script('ScrollMagic.min.js');
 
-//animation Plugin
+  //animation Plugin
 
- wp_register_script( 'animation.gsap.min.js','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', array(), false, true );
- wp_enqueue_script('animation.gsap.min.js'); 
+  wp_register_script('animation.gsap.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', array(), false, true);
+  wp_enqueue_script('animation.gsap.min.js');
 
-//animation Plugin
+  //animation Plugin
 
- wp_register_script( 'debug.addIndicators.min.js','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', array(), false, true );
- wp_enqueue_script('debug.addIndicators.min.js'); 
-
-
-
- /*-wp register script for custom js -*/
- wp_register_script('gsap-custom.js', get_template_directory_uri() . '/assets/vendor/gsap/js/gsap-custom.js', [], 1, true);
- wp_enqueue_script('gsap-custom.js');
+  wp_register_script('debug.addIndicators.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', array(), false, true);
+  wp_enqueue_script('debug.addIndicators.min.js');
 
 
+
+  /*-wp register script for custom js -*/
+  wp_register_script('gsap-custom.js', get_template_directory_uri() . '/assets/vendor/gsap/js/gsap-custom.js', [], 1, true);
+  wp_enqueue_script('gsap-custom.js');
 }
 
-add_action('wp_enqueue_scripts','andgo_theme_scripts');
+add_action('wp_enqueue_scripts', 'andgo_theme_scripts');
 
 //Register Theme Styles
-function andgo_theme_styles(){
-    wp_enqueue_style('bootstrap.css',get_template_directory_uri(). '/assets/css/bootstrap.css');
-    
-    wp_enqueue_style('style', get_template_directory_uri(). '/style.css');
+function andgo_theme_styles()
+{
+  wp_enqueue_style('bootstrap.css', get_template_directory_uri() . '/assets/css/bootstrap.css');
 
-   /*Enqueue laravel scss styles start */
-   //Dynamic page showing style on save dir
-    wp_enqueue_style('app.css', get_template_directory_uri() . '/dist/dist/app.css', [], 1, 'all');
-    /*Enqueue laravel scss styles end */
+  wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 
-} 
+  /*Enqueue laravel scss styles start */
+  //Dynamic page showing style on save dir
+  wp_enqueue_style('app.css', get_template_directory_uri() . '/sass/dist/app.css', [], 1, 'all');
+  /*Enqueue laravel scss styles end */
+}
 
 add_action('wp_enqueue_scripts', 'andgo_theme_styles');

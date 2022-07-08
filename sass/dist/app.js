@@ -1,9 +1,9 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/dist/app.js":
+/***/ "./sass/src/app.js":
 /*!*************************!*\
-  !*** ./src/dist/app.js ***!
+  !*** ./sass/src/app.js ***!
   \*************************/
 /***/ (() => {
 
@@ -11,9 +11,9 @@
 
 /***/ }),
 
-/***/ "./src/dist/app.scss":
+/***/ "./sass/src/app.scss":
 /*!***************************!*\
-  !*** ./src/dist/app.scss ***!
+  !*** ./sass/src/app.scss ***!
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/app": 0,
-/******/ 			"dist/app": 0
+/******/ 			"app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -161,8 +161,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["dist/app"], () => (__webpack_require__("./src/dist/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["dist/app"], () => (__webpack_require__("./src/dist/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["app"], () => (__webpack_require__("./sass/src/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["app"], () => (__webpack_require__("./sass/src/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
