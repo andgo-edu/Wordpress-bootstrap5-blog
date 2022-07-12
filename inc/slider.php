@@ -10,7 +10,7 @@ get_header();
     <div class="carousel-inner">
         <?php
         // Define our WP Query Parameters
-        $andgocarousel = new WP_Query('posts_per_page=10', array(
+        $andgocarousel = new WP_Query('posts_per_page=5', array(
             // this the one in register post type in slider.php in functions
             'post_type' => 'andgocarouselpost',
 
@@ -31,12 +31,11 @@ get_header();
                             'alt' => 'post-thumbnail',
                             'style' => 'max-width:1080px;max-height:1920px; object-fit:cover;'
                         )); ?>
-                </a>
-                <a class="h5__sliderLink" href="<?php the_permalink() ?>">
 
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="h5__slider"><?php the_title(); ?></h5>
-                </a>
+                    <a class="h5__sliderLink" href="<?php the_permalink() ?>">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="h5__slider"><?php the_title(); ?></h5>
+                    </a>
 
             </div>
         </div>

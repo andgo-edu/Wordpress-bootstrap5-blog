@@ -75,7 +75,7 @@ get_header();
             <div class="col-md-6 gx-5">
                 <a href="<?php the_permalink() ?>">
                     <img class="img-fluid rounded-4 shadow-5-strong"
-                        style="max-height:1000px; max-width:1000px; width:100%; height:100%; min-width:250px; min-height:250px; object-fit:cover;"
+                        style="max-height:1000px; max-width:1920px; width:100%; height:100%; min-width:250px; min-height:250px; object-fit:cover;"
                         src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
                     <h3>
                         <?php echo the_title(); ?></br>

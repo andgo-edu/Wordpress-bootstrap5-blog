@@ -32,16 +32,15 @@ function andgo_theme_scripts()
   wp_register_script('animation.gsap.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', array(), false, true);
   wp_enqueue_script('animation.gsap.min.js');
 
-  //animation Plugin
 
   wp_register_script('debug.addIndicators.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', array(), false, true);
   wp_enqueue_script('debug.addIndicators.min.js');
 
-
-
-  /*-wp register script for custom js -*/
-  wp_register_script('gsap-custom.js', get_template_directory_uri() . '/assets/vendor/gsap/js/gsap-custom.js', [], 1, true);
-  wp_enqueue_script('gsap-custom.js');
+  //ScrollTrigger is the updated version of ScrollMagic
+  /**
+   *   wp_register_script('ScrollTrigger.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array(), false, true);
+  wp_enqueue_script('ScrollTrigger.min.js');
+   */
 }
 
 add_action('wp_enqueue_scripts', 'andgo_theme_scripts');
