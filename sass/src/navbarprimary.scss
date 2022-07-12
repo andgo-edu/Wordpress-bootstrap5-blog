@@ -1,4 +1,5 @@
-.top-nav-bar {
+.top-nav-bar > ul {
+  list-style: none;
 }
 
 .top-nav-bar > li {
@@ -11,7 +12,6 @@ justify-content: space-evenly;
   display: block;
   padding: 8px;
   background-color: #dddddd;
-  justify-content: space-evenly;
 
 }
 
@@ -38,3 +38,6 @@ justify-content: space-evenly;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+#navbarSupportedContent

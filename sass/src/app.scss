@@ -25,7 +25,16 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  text-decoration: none;
 
+
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  list-style-type: none;
+  text-decoration-line: none;
 }
 
 /* Typeography General*/

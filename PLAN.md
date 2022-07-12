@@ -5,6 +5,6 @@
 
 # PART 2 Tasks
 
-1. Styling the About Page 
-2. Styling the contact Page
-3. Fix List style on nav bar 
+1. Styling the About Page [x]
+2. Styling the contact Page [x]
+3. Fix List style on nav bar [x]

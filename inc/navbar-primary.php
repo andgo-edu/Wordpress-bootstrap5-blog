@@ -1,4 +1,4 @@
-<header>
+<header class="navbar__header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/wordpress">AndGoEdu</a>
@@ -34,5 +34,22 @@
 <body>
 
     <style>
+    .top-nav-bar {
+        text-decoration: none;
+        text-align: right;
+        float: right;
+        justify-content: space-evenly;
 
+    }
+
+
+    .top-nav-bar,
+    ul,
+    li,
+    a,
+    .page_item {
+        display: inline;
+        text-decoration: none;
+
+    }
     </style>
