@@ -58,11 +58,11 @@ $author_url = get_author_posts_url($post_author_id); //getting the post_author_i
 
                 <?php endwhile;
 
-          // Previous/next page navigation.
-          the_posts_pagination();
+                    // Previous/next page navigation.
+                    the_posts_pagination();
 
-
-        else : ?>
+                    ?>
+                <?php else : ?>
                 <p><?php _e('No posts by this author.'); ?></p>
 
                 <?php endif; ?>
@@ -91,12 +91,12 @@ $author_url = get_author_posts_url($post_author_id); //getting the post_author_i
                 <div class="p-4 mb-3 bg-light rounded">
                     <h4 class="fst-italic">About</h4>
                     <p class="mb-0"> <?php
-                            if (isset($excerptzulu)) {
-                              echo $excerptzulu;
-                            } else {
-                              echo "<h6>There is no about for this post :D</h6>";
-                            }
-                            ?>
+                                        if (isset($excerptzulu)) {
+                                            echo $excerptzulu;
+                                        } else {
+                                            echo "<h6>There is no about for this post :D</h6>";
+                                        }
+                                        ?>
                     </p>
                 </div>
 
@@ -126,25 +126,25 @@ $author_url = get_author_posts_url($post_author_id); //getting the post_author_i
     </div>
     <?php
 
-  //Get only the approved comments
-  $args = array(
-    'status' => 'approve'
-  );
+    //Get only the approved comments
+    $args = array(
+        'status' => 'approve'
+    );
 
-  // The comment Query
-  $comments_query = new WP_Comment_Query;
-  $comments = $comments_query->query($args);
+    // The comment Query
+    $comments_query = new WP_Comment_Query;
+    $comments = $comments_query->query($args);
 
-  // Comment Loop
-  if ($comments) {
-    foreach ($comments as $comment) {
-      echo '<p>' . $comment->comment_content . '</p>';
+    // Comment Loop
+    if ($comments) {
+        foreach ($comments as $comment) {
+            echo '<p>' . $comment->comment_content . '</p>';
+        }
+    } else {
+        echo 'No comments found.';
     }
-  } else {
-    echo 'No comments found.';
-  }
 
-  ?>
+    ?>
 </main>
 
 
