@@ -5,7 +5,7 @@
 // Register Theme Scripts
 function andgo_theme_scripts()
 {
-  wp_enqueue_script('bootstrap.bundle.js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.js');
+  //wp_enqueue_script('bootstrap.bundle.js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.js');
 
   /*-enqueue laravelmix js script start -*/
   wp_register_script('app.js', get_template_directory_uri() . '/sass/dist/app.js', [], 1, true);
@@ -17,6 +17,10 @@ function andgo_theme_scripts()
 
   wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js', array(), false, true);
   wp_enqueue_script('gsap');
+
+
+  wp_register_script('bootstrap5js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array(), false, true);
+  wp_enqueue_script('bootstrap5js');
 
   /***Gsap Aniamtion PLugins */
   //TweenMax
@@ -48,7 +52,7 @@ add_action('wp_enqueue_scripts', 'andgo_theme_scripts');
 //Register Theme Styles
 function andgo_theme_styles()
 {
-  wp_enqueue_style('bootstrap.css', get_template_directory_uri() . '/assets/css/bootstrap.css');
+  //wp_enqueue_style('bootstrap.css', get_template_directory_uri() . '/assets/css/bootstrap.css');
 
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 

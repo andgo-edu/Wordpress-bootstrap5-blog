@@ -22,10 +22,10 @@ wp_footer();
             <h5>Section</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><?php
-            wp_nav_menu(array(
-                'theme_location' => 'footer-menu',
-                'container_class' => 'footer-class',
-            ));?>
+                                                                                        wp_nav_menu(array(
+                                                                                            'theme_location' => 'footer-menu',
+                                                                                            'container_class' => 'footer-class',
+                                                                                        )); ?>
                     </a>
                 </li>
             </ul>
@@ -34,6 +34,11 @@ wp_footer();
 
     </footer>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
 </body>
 
 </html>
