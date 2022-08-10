@@ -112,8 +112,15 @@ That the port can be changed to your prefered server
 </small>
 
 ## Usage 
+ 
+1.Downlaod the files 
+2.Install zip folder in wp themes
+
 ```
-upload to WordPress As Zip  
+// if you want to edit the styles 
+npm run watch 
+// and all the  files scss is imported at src/app.scss and compiled in /dist/app.css 
+
 ```
 
 
