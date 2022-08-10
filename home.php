@@ -59,11 +59,7 @@ get_header();
 <div class="wrapper" id="js-wrapper">
     <div class="sections" id="js-slideContainer">
 
-        <section class="section">
-            <span class="sectionTitle" id="title1"> <?php
-                                                    include('inc/slider.php');
-                                                    ?> </span>
-        </section>
+
 
         <?php
         if (have_posts()) :
@@ -77,15 +73,17 @@ get_header();
                     <img class="img-fluid rounded-4 shadow-5-strong"
                         style="max-height:1000px; max-width:1920px; width:100%; height:100%; min-width:250px; min-height:250px; object-fit:contain;"
                         src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
-                    <h3>
-                        <?php echo the_title(); ?></br>
+                    <strong>
+                        <?php the_title(); ?>
 
-                    </h3>
-                    </br>
-                    <h4>
+                    </strong>
+                    <hr class="py-1" style="background-color: transparent;" />
+
+                    <em>
                         <?php the_time('l, F jS, Y'); ?>
+                    </em>
 
-                    </h4>
+
                 </a>
             </div>
 
@@ -99,6 +97,13 @@ get_header();
 
 
 </div>
+
+
+
+<?php
+include('inc/slider.php');
+
+?>
 
 
 

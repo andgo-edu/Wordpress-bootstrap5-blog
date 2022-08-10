@@ -1,5 +1,12 @@
 <?php
+/*
+Template Name: Categories 
+*/
 get_header();
+
+
+
+
 if (is_category('Courses')) : ?>
 
 <h1 class="text-white text-center">All Courses posts</h1>
@@ -45,16 +52,15 @@ if (is_category('Courses')) : ?>
     get_footer();
     ?>
 </div>
-<?php elseif (is_category('CSS3 Course')) : ?>
+<?php elseif (is_category('Front End')) : ?>
 <div class="row">
     <div class="col-lg-12">
         <div class="container-fluid text-center">
             <h1 class="text-white">
-
+                <?php wp_list_category(); ?>
             </h1>
 
             <h2>
-                Categories
                 <?php wp_list_categories(); ?>
             </h2>
             <?php
@@ -66,7 +72,7 @@ if (is_category('Courses')) : ?>
                 $args = array(
                     'post_type' => 'courses_post',
                     'posts_per_page' => 10,
-                    'category' => 'CSS3 Course',
+                    'category' => 'Front End',
 
 
                 );
@@ -98,12 +104,172 @@ if (is_category('Courses')) : ?>
         </div>
     </div>
 
-</div><?php else : ?>
+</div>
+<?php elseif (is_category('Security')) : ?>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="container-fluid text-center">
+
+            <h2>
+                <?php wp_list_categories(); ?>
+            </h2>
+            <?php
+
+                get_header();
+                ?>
+
+            <?php
+                $args = array(
+                    'post_type' => 'courses_post',
+                    'posts_per_page' => 10,
+                    'category' => 'Security',
+
+
+                );
+                $courses = new WP_Query($args, array(
+                    // this the one in register post type in slider.php in functions
+                    'post_type' => 'courses_post',
+                    'style' => '',
+                    'loading' => 'lazy',
+
+                ));
+                while ($courses->have_posts()) : $courses->the_post();
+                ?>
+
+            <a href="<?php the_permalink() ?>">
+                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+            </a>
+            <strong class="text-white">
+                <?php the_title(); ?>
+            </strong>
+
+            <?php
+                // Repeat the process and reset once it hits the limit
+                endwhile;
+                wp_reset_postdata();
+
+                ?>
+
+            <?php
+                get_footer();
+                ?>
+        </div>
+    </div>
+
+</div>
+<?php elseif (is_category('Back End')) : ?>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="container-fluid text-center">
+            <h1 class="text-white">
+                <?php wp_list_category(); ?>
+            </h1>
+
+            <h2>
+                <?php wp_list_categories(); ?>
+            </h2>
+            <?php
+
+                get_header();
+                ?>
+
+            <?php
+                $args = array(
+                    'post_type' => 'courses_post',
+                    'posts_per_page' => 10,
+                    'category' => 'Back End',
+
+
+                );
+                $courses = new WP_Query($args, array(
+                    // this the one in register post type in slider.php in functions
+                    'post_type' => 'courses_post',
+                    'style' => '',
+                    'loading' => 'lazy',
+
+                ));
+                while ($courses->have_posts()) : $courses->the_post();
+                ?>
+
+            <a href="<?php the_permalink() ?>">
+                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+            </a>
+
+
+            <?php
+                // Repeat the process and reset once it hits the limit
+                endwhile;
+                wp_reset_postdata();
+
+                ?>
+
+            <?php
+                get_footer();
+                ?>
+        </div>
+    </div>
+
+</div>
+<?php elseif (is_category('UI/UX')) : ?>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="container-fluid text-center">
+            <h1 class="text-white">
+                <?php wp_list_category(); ?>
+            </h1>
+
+            <h2>
+                <?php wp_list_categories(); ?>
+            </h2>
+            <?php
+
+                get_header();
+                ?>
+
+            <?php
+                $args = array(
+                    'post_type' => 'courses_post',
+                    'posts_per_page' => 10,
+                    'category' => 'UI/UX',
+
+
+                );
+                $courses = new WP_Query($args, array(
+                    // this the one in register post type in slider.php in functions
+                    'post_type' => 'courses_post',
+                    'style' => '',
+                    'loading' => 'lazy',
+
+                ));
+                while ($courses->have_posts()) : $courses->the_post();
+                ?>
+
+            <a href="<?php the_permalink() ?>">
+                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+            </a>
+
+
+            <?php
+                // Repeat the process and reset once it hits the limit
+                endwhile;
+                wp_reset_postdata();
+
+                ?>
+
+            <?php
+                get_footer();
+                ?>
+        </div>
+    </div>
+
+</div>
+
+
+<?php else : ?>
 <?php
-            get_header();
+    get_header();
     ?>
-<p>This is some generic text to describe all other category pages,
-    I could be left blank</p>
+
 <div class="row">
     <div class="col-lg-12">
         <div class="container-fluid text-center">
@@ -112,29 +278,33 @@ if (is_category('Courses')) : ?>
             </h1>
 
             <h2>
-                Categories
                 <?php wp_list_categories(); ?>
             </h2>
 
         </div>
     </div>
     <?php if (have_posts()) :
-                while (have_posts()) : the_post();
-                    // Your loop code
+            while (have_posts()) : the_post();
+                // Your loop code
         ?>
     <div class="col-md-6 gx-5">
+        <h3 style="float:right;" class="text-white"><?php the_title(); ?></h3>
         <a href="<?php the_permalink() ?>">
 
             <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px"
                 src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
-            <p style="float:right;"><?php echo the_title(); ?></br>
-                <?php the_time('l, F jS, Y'); ?></p>
+            <small>
+                <em>
+                    <?php the_time('l, F jS, Y'); ?>
+
+                </em>
+            </small>
         </a>
     </div>
     <?php endwhile;;
             ?>
     <?php
-                get_footer();
+            get_footer();
             ?>
     <?php endif;
         ?>

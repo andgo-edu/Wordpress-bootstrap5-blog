@@ -8,7 +8,7 @@ function register_angdo_courses_catalog_post()
 	 */
 
 	$labels = [
-		"name" => __("Courses", "courses_catalog_post_type"),
+		"name" => __("Courses", "courses_post"),
 		"singular_name" => __("Course", "courses_catalog_post_type"),
 		"menu_name" => __("Andgo Courses Posts", "courses_catalog_post_type"),
 		"all_items" => __("All Courses Posts", "courses_catalog_post_type"),
@@ -39,7 +39,7 @@ function register_angdo_courses_catalog_post()
 	];
 
 	$args = [
-		"label" => __("Courses", "courses_catalog_post_type"),
+		"label" => __("Courses", "courses_post"),
 		"labels" => $labels,
 		"description" => "A custom plugin that supports video , images , text and other content from other plugins ",
 		"public" => true,
@@ -54,7 +54,7 @@ function register_angdo_courses_catalog_post()
 		"hierarchical" => false,
 		"can_export" => false,
 		"menu_icon" => "dashicons-book-alt",
-		"supports" => ["title", "editor", "thumbnail"],
+		"supports" => ["title", "editor", "thumbnail", "block"],
 		"capability_type" => "post", "page",
 
 		"show_in_graphql" => false,
@@ -87,8 +87,8 @@ add_action('init', 'register_angdo_courses_catalog_post');
 function wporg_register_taxonomy_course()
 {
 	$labels = array(
-		'name'              => _x('Courses', 'taxonomy general name'),
-		'singular_name'     => _x('Course', 'taxonomy singular name'),
+		'name'              => _x('Courses', 'courses_post'),
+		'singular_name'     => _x('Course', 'course_post'),
 		'search_items'      => __('Search Courses'),
 		'all_items'         => __('All Courses'),
 		'parent_item'       => __('Parent Course'),

@@ -1,7 +1,5 @@
 <?php
-/*
-Template Name: Courses Catalog Andgoedu
- */
+
 get_header();
 ?>
 

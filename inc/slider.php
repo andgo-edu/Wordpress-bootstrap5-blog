@@ -1,8 +1,4 @@
 <?php
-/*
-Template Name: Posts Slider
-*/
-
 get_header();
 ?>
 <div id="carouselExampleDark" class="carousel container-fluid transform carousel-fade text-center"
