@@ -11,8 +11,8 @@ wp_head();
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'
     http://localhost/wordpress/  https://cdn.jsdelivr.net  https://cdnjs.cloudflare.com ;  
-    img-src  'self' 'unsafe-inline' http://localhost/ https://www.w3.org/  http://0.gravatar.com/ https://res.cloudinary.com; 
-    media-src 'self' 'unsafe-inline' http://localhost/ https://www.w3.org https://res.cloudinary.com; 
+    img-src  'self' 'unsafe-inline' http://localhost/ https://www.w3.org/  http://0.gravatar.com/ https://res.cloudinary.com https://images.pexels.com/ https://www.svgrepo.com; 
+    media-src 'self' 'unsafe-inline' http://localhost/ https://www.w3.org https://res.cloudinary.com https://images.pexels.com/ https://www.svgrepo.com; 
     script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net  https://cdnjs.cloudflare.com https://www.w3.org; 
     style-src 'self' 'unsafe-inline' http://localhost/  https://cdn.jsdelivr.net ; 
     style-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net ; 
