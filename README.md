@@ -10,7 +10,7 @@
                       
 </span>
 
-  <a href="https://github.com/omarashzeinhom/graphcms-gaming-blog">
+  <a href="https://andgoedu.lovestoblog.com/">
   </a>
 
   <h3 align="center"></h3>
@@ -62,7 +62,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://oa-gaming-blog.vercel.app/)
+[![Product Name Screen Shot][product-screenshot]](https://andgoedu.lovestoblog.com/)
 
 
 
@@ -267,7 +267,7 @@ mix.sass("src/navigationbar.scss", "dist").setPublicPath("dist");
 [forks-url]: https://github.com/omarashzeinhom/gaming-graphcms-blog-auth/network/members
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]:https://www.linkedin.com/in/omar-abdelrahman-7602a9126/?challengeId=AQEV9iEfbhe5gAAAAX-mimK5NgF_ZhhgsWKnBK9_zqyaTZckcCE79DjQV-8dXVQnAYfVBYBjqhTy_kV030w0LcR3fKRVV8IgyQ&submissionId=02a9350a-f50a-de16-1a87-3ca3b148e71a
-[product-screenshot]: img/gaming-blog-screen-shot.jpg
+[product-screenshot]: screenshot.png
 
 
 
