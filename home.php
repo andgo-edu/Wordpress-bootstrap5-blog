@@ -56,6 +56,12 @@ get_header();
 }
 </style>
 
+
+<?php
+include('inc/slider.php');
+
+?>
+
 <div class="wrapper" id="js-wrapper">
     <div class="sections" id="js-slideContainer">
 
@@ -98,12 +104,6 @@ get_header();
 
 </div>
 
-
-
-<?php
-include('inc/slider.php');
-
-?>
 
 
 

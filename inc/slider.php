@@ -25,7 +25,7 @@ get_header();
                             'class' => 'img-fluid shadow-5-strong rounded-5 mb-1  w-100 h-100',
                             'loading' => 'lazy',
                             'alt' => 'post-thumbnail',
-                            'style' => 'max-width:1080px;max-height:1920px; object-fit:cover;'
+                            'style' => 'max-width:2000px;max-height:2000px; object-fit:cover;'
                         )); ?>
 
                     <a class="h5__sliderLink" href="<?php the_permalink() ?>">
