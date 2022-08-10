@@ -21,12 +21,9 @@ get_header();
             <div class="carousel-item">
                 <?php endif; ?>
                 <a href="<?php the_permalink() ?>">
-                    <?php echo the_post_thumbnail('medium', array(
-                            'class' => 'img-fluid shadow-5-strong rounded-5 mb-1  w-100 h-100',
-                            'loading' => 'lazy',
-                            'alt' => 'post-thumbnail',
-                            'style' => 'max-width:2000px;max-height:2000px; object-fit:cover;'
-                        )); ?>
+                    <img class="img-fluid rounded-4 shadow-5-strong"
+                        style="max-height:1000px; max-width:1920px; width:100%; height:100%; min-width:250px; min-height:250px; object-fit:contain;"
+                        src="<?php echo the_post_thumbnail_url(); ?>" />
 
                     <a class="h5__sliderLink" href="<?php the_permalink() ?>">
                         <div class="carousel-caption d-none d-md-block">

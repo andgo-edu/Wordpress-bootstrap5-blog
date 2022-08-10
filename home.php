@@ -78,7 +78,7 @@ include('inc/slider.php');
                 <a href="<?php the_permalink() ?>">
                     <img class="img-fluid rounded-4 shadow-5-strong"
                         style="max-height:1000px; max-width:1920px; width:100%; height:100%; min-width:250px; min-height:250px; object-fit:contain;"
-                        src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
+                        src="<?php echo the_post_thumbnail_url(); ?>" />
                     <strong>
                         <?php the_title(); ?>
 
