@@ -81,7 +81,7 @@ add_action('init', 'register_angdo_courses_catalog_post');
 * Description: A short example showing how to add a taxonomy called Course.
 * Version: 1.0
 * Author: developer.wordpress.org
-* Author URI: https://codex.wordpress.org/User:Aternus
+* Author URI: 
 */
 
 function wporg_register_taxonomy_course()
