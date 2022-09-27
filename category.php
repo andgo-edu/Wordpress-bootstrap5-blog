@@ -28,6 +28,10 @@ if (is_category('Front End')) : ?>
 
                         <a href="<?php the_permalink() ?>">
                             <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+                            <strong class="text-white">
+                                <?php the_title(); ?>
+                            </strong>
+
                         </a>
 
 
@@ -67,10 +71,11 @@ if (is_category('Front End')) : ?>
 
                         <a href="<?php the_permalink() ?>">
                             <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+                            <strong class="text-white">
+                                <?php the_title(); ?>
+                            </strong>
+
                         </a>
-                        <strong class="text-white">
-                            <?php the_title(); ?>
-                        </strong>
 
                     <?php endwhile;;
                     wp_reset_postdata();
@@ -108,10 +113,10 @@ if (is_category('Front End')) : ?>
 
                         <a href="<?php the_permalink() ?>">
                             <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+                            <strong class="text-white">
+                                <?php the_title(); ?>
+                            </strong>
                         </a>
-                        <strong class="text-white">
-                            <?php the_title(); ?>
-                        </strong>
 
                     <?php endwhile;;
                     wp_reset_postdata();
@@ -148,33 +153,38 @@ if (is_category('Front End')) : ?>
 
             </div>
         </div>
-        <?php if (have_posts()) :
-            while (have_posts()) : the_post();
-                // Your loop code
-        ?>
-                <div class="col-md-6 gx-5">
-                    <h3 style="float:right;" class="text-white"><?php the_title(); ?></h3>
-                    <a href="<?php the_permalink() ?>">
+    </div>
+    <?php if (have_posts()) :
+        while (have_posts()) : the_post();
+            // Your loop code
+    ?>
+            <div class="col-md-6 gx-5">
+                <h3 style="float:right;" class="text-white"><?php the_title(); ?></h3>
+                <a href="<?php the_permalink() ?>">
 
-                        <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px" src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
-                        <small>
-                            <em>
-                                <?php the_time('l, F jS, Y'); ?>
+                    <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px" src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
+                    <strong class="text-white">
+                        <?php the_title(); ?>
+                    </strong>
 
-                            </em>
-                        </small>
-                    </a>
-                </div>
+                    <small>
+                        <em>
+                            <?php the_time('l, F jS, Y'); ?>
 
-            <?php endwhile;;
-            wp_reset_postdata();
+                        </em>
+                    </small>
+                </a>
+            </div>
 
-            ?>
-        <?php endif;
-        ?>
-        <?php
-        get_footer();
+        <?php endwhile;;
+        wp_reset_postdata();
+
         ?>
     <?php endif;
     ?>
-    </div>
+    <?php
+    get_footer();
+    ?>
+<?php endif;
+?>
+</div>

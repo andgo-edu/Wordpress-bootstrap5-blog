@@ -287,14 +287,16 @@ if (is_category('Courses')) : ?>
                 <div class="col-md-6 gx-5">
                     <h3 style="float:right;" class="text-white"><?php the_title(); ?></h3>
                     <a href="<?php the_permalink() ?>">
-
                         <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px" src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
                         <small>
                             <em>
+
                                 <?php the_time('l, F jS, Y'); ?>
 
                             </em>
                         </small>
+
+
                     </a>
                 </div>
             <?php endwhile;;
