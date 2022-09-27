@@ -9,43 +9,16 @@ get_header();
 
 if (is_category('Front End')) : ?>
 
-    <h1 class="text-white text-center">Front End</h1>
 
-    <?php
-    if (have_posts()) :
-        while (have_posts()) : the_post();
-            // Your loop code
-    ?>
-
-
-
-            <a href="<?php the_permalink() ?>">
-                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
-            </a>
-
-
-
-
-            <?php
-            get_footer();
-            ?>
-            </div>
-
-        <?php endwhile;;
-        ?>
-    <?php endif;
-    ?>
-
-
-
-
-<?php elseif (is_category('Front End')) : ?>
     <div class="row">
+
         <div class="col-lg-12">
             <div class="container-fluid text-center">
-                <h1 class="text-white">
+                <h1 class="text-white text-center">Front End</h1>
 
-                </h1>
+                <h2>
+                    <?php wp_list_categories(); ?>
+                </h2>
 
                 <?php
                 if (have_posts()) :
@@ -53,28 +26,30 @@ if (is_category('Front End')) : ?>
                         // Your loop code
                 ?>
 
-
                         <a href="<?php the_permalink() ?>">
                             <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
                         </a>
+
 
 
                     <?php endwhile;;
                     ?>
                 <?php endif;
                 ?>
-
-                <?php
-                get_footer();
-                ?>
             </div>
         </div>
 
     </div>
+    <?php
+    get_footer();
+    ?>
+    </div>
 <?php elseif (is_category('Security')) : ?>
+
     <div class="row">
         <div class="col-lg-12">
             <div class="container-fluid text-center">
+                <h1 class="text-white text-center">Security</h1>
 
                 <h2>
                     <?php wp_list_categories(); ?>
@@ -89,7 +64,6 @@ if (is_category('Front End')) : ?>
                     while (have_posts()) : the_post();
                         // Your loop code
                 ?>
-
 
                         <a href="<?php the_permalink() ?>">
                             <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
@@ -116,10 +90,7 @@ if (is_category('Front End')) : ?>
     <div class="row">
         <div class="col-lg-12">
             <div class="container-fluid text-center">
-                <h1 class="text-white">
-                    <?php wp_list_category(); ?>
-                </h1>
-
+                <h1 class="text-white text-center">Back End</h1>
                 <h2>
                     <?php wp_list_categories(); ?>
                 </h2>
@@ -128,17 +99,18 @@ if (is_category('Front End')) : ?>
                 get_header();
                 ?>
 
-
                 <?php
                 if (have_posts()) :
                     while (have_posts()) : the_post();
                         // Your loop code
                 ?>
+
                         <a href="<?php the_permalink() ?>">
                             <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
                         </a>
-
-
+                        <strong class="text-white">
+                            <?php the_title(); ?>
+                        </strong>
 
                     <?php endwhile;;
                     wp_reset_postdata();
@@ -147,15 +119,15 @@ if (is_category('Front End')) : ?>
                 <?php endif;
                 ?>
 
-                <?php
-                get_footer();
-                ?>
+
             </div>
         </div>
 
     </div>
 
-
+    <?php
+    get_footer();
+    ?>
 
 <?php else : ?>
     <?php
