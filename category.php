@@ -151,9 +151,7 @@ if (is_category('Front End')) : ?>
                     <?php wp_list_categories(); ?>
                 </h2>
 
-            </div>
-        </div>
-    </div>
+  
     <?php if (have_posts()) :
         while (have_posts()) : the_post();
             // Your loop code
@@ -182,6 +180,10 @@ if (is_category('Front End')) : ?>
         ?>
     <?php endif;
     ?>
+  
+              </div>
+        </div>
+    </div>
     <?php
     get_footer();
     ?>
