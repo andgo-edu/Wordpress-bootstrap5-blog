@@ -79,13 +79,14 @@ if (is_category('Front End')) : ?>
                 <?php endif;
                 ?>
 
-                <?php
-                get_footer();
-                ?>
+
             </div>
         </div>
 
     </div>
+    <?php
+    get_footer();
+    ?>
 <?php elseif (is_category('Back End')) : ?>
     <div class="row">
         <div class="col-lg-12">
