@@ -7,307 +7,201 @@ get_header();
 
 
 
-if (is_category('Courses')) : ?>
+if (is_category('Front End')) : ?>
 
-<h1 class="text-white text-center">All Courses posts</h1>
+    <h1 class="text-white text-center">Front End</h1>
 
-<?php
-    //1. defined the array inside
-    $args = array(
-        'post_type' => 'courses_post',
-        'posts_per_page' => 10,
-        'taxonomy'           => 'category',
-    );
-
-    //2. define a new variable for you custom post type 
-    $courses = new WP_Query($args, array(
-        // this the one in register post type in courses-catalog.php in functions
-        'post_type' => 'courses_post',
-        'style' => '',
-        'loading' => 'lazy'
-    ));
-    //3. while loop over the courses with have posts 
-    while ($courses->have_posts()) : $courses->the_post();
-
-        //Note after this line between the endwhile anything here will be inside the loop and repeated .
+    <?php
+    if (have_posts()) :
+        while (have_posts()) : the_post();
+            // Your loop code
     ?>
 
 
-<a href="<?php the_permalink() ?>">
-    <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
-</a>
 
-<?php
-    //4. End the while loop and reset the post data 
-    // Repeat the process and reset once it hits the limit
-    endwhile;
-    wp_reset_postdata();
+            <a href="<?php the_permalink() ?>">
+                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+            </a>
 
+
+
+
+            <?php
+            get_footer();
+            ?>
+            </div>
+
+        <?php endwhile;;
+        ?>
+    <?php endif;
     ?>
 
-<?php wp_list_categories($args); ?>
 
 
-<?php
-    get_footer();
-    ?>
-</div>
+
 <?php elseif (is_category('Front End')) : ?>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="container-fluid text-center">
-            <h1 class="text-white">
-              
-            </h1>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="container-fluid text-center">
+                <h1 class="text-white">
 
-            <h2>
-                <?php wp_list_categories(); ?>
-            </h2>
-            <?php
+                </h1>
 
-                get_header();
+                <?php
+                if (have_posts()) :
+                    while (have_posts()) : the_post();
+                        // Your loop code
                 ?>
 
-            <?php
-                $args = array(
-                    'post_type' => 'courses_post',
-                    'posts_per_page' => 10,
-                    'category' => 'Front End',
+
+                        <a href="<?php the_permalink() ?>">
+                            <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+                        </a>
 
 
-                );
-                $courses = new WP_Query($args, array(
-                    // this the one in register post type in slider.php in functions
-                    'post_type' => 'courses_post',
-                    'style' => '',
-                    'loading' => 'lazy',
-
-                ));
-                while ($courses->have_posts()) : $courses->the_post();
+                    <?php endwhile;;
+                    ?>
+                <?php endif;
                 ?>
 
-            <a href="<?php the_permalink() ?>">
-                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
-            </a>
-
-
-            <?php
-                // Repeat the process and reset once it hits the limit
-                endwhile;
-                wp_reset_postdata();
-
-                ?>
-
-            <?php
+                <?php
                 get_footer();
                 ?>
+            </div>
         </div>
-    </div>
 
-</div>
+    </div>
 <?php elseif (is_category('Security')) : ?>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="container-fluid text-center">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="container-fluid text-center">
 
-            <h2>
-                <?php wp_list_categories(); ?>
-            </h2>
-            <?php
+                <h2>
+                    <?php wp_list_categories(); ?>
+                </h2>
+                <?php
 
                 get_header();
                 ?>
 
-            <?php
-                $args = array(
-                    'post_type' => 'courses_post',
-                    'posts_per_page' => 10,
-                    'category' => 'Security',
-
-
-                );
-                $courses = new WP_Query($args, array(
-                    // this the one in register post type in slider.php in functions
-                    'post_type' => 'courses_post',
-                    'style' => '',
-                    'loading' => 'lazy',
-                    'category' => 'Security',
-
-                ));
-                while ($courses->have_posts()) : $courses->the_post();
+                <?php
+                if (have_posts()) :
+                    while (have_posts()) : the_post();
+                        // Your loop code
                 ?>
 
-            <a href="<?php the_permalink() ?>">
-                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
-            </a>
-            <strong class="text-white">
-                <?php the_title(); ?>
-            </strong>
 
-            <?php
-                // Repeat the process and reset once it hits the limit
-                endwhile;
-                wp_reset_postdata();
+                        <a href="<?php the_permalink() ?>">
+                            <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+                        </a>
+                        <strong class="text-white">
+                            <?php the_title(); ?>
+                        </strong>
 
+                    <?php endwhile;;
+                    wp_reset_postdata();
+
+                    ?>
+                <?php endif;
                 ?>
 
-            <?php
+                <?php
                 get_footer();
                 ?>
+            </div>
         </div>
-    </div>
 
-</div>
+    </div>
 <?php elseif (is_category('Back End')) : ?>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="container-fluid text-center">
-            <h1 class="text-white">
-                <?php wp_list_category(); ?>
-            </h1>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="container-fluid text-center">
+                <h1 class="text-white">
+                    <?php wp_list_category(); ?>
+                </h1>
 
-            <h2>
-                <?php wp_list_categories(); ?>
-            </h2>
-            <?php
-
-                get_header();
-                ?>
-
-            <?php
-                $args = array(
-                    'post_type' => 'courses_post',
-                    'posts_per_page' => 10,
-                    'category' => 'Back End',
-
-
-                );
-                $courses = new WP_Query($args, array(
-                    // this the one in register post type in slider.php in functions
-                    'post_type' => 'courses_post',
-                    'style' => '',
-                    'loading' => 'lazy',
-
-                ));
-                while ($courses->have_posts()) : $courses->the_post();
-                ?>
-
-            <a href="<?php the_permalink() ?>">
-                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
-            </a>
-
-
-            <?php
-                // Repeat the process and reset once it hits the limit
-                endwhile;
-                wp_reset_postdata();
-
-                ?>
-
-            <?php
-                get_footer();
-                ?>
-        </div>
-    </div>
-
-</div>
-<?php elseif (is_category('UI/UX')) : ?>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="container-fluid text-center">
-            <h1 class="text-white">
-                <?php wp_list_category(); ?>
-            </h1>
-
-            <h2>
-                <?php wp_list_categories(); ?>
-            </h2>
-            <?php
+                <h2>
+                    <?php wp_list_categories(); ?>
+                </h2>
+                <?php
 
                 get_header();
                 ?>
 
-            <?php
-                $args = array(
-                    'post_type' => 'courses_post',
-                    'posts_per_page' => 10,
-                    'category' => 'UI/UX',
+
+                <?php
+                if (have_posts()) :
+                    while (have_posts()) : the_post();
+                        // Your loop code
+                ?>
+                        <a href="<?php the_permalink() ?>">
+                            <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
+                        </a>
 
 
-                );
-                $courses = new WP_Query($args, array(
-                    // this the one in register post type in slider.php in functions
-                    'post_type' => 'courses_post',
-                    'style' => '',
-                    'loading' => 'lazy',
 
-                ));
-                while ($courses->have_posts()) : $courses->the_post();
+                    <?php endwhile;;
+                    wp_reset_postdata();
+
+                    ?>
+                <?php endif;
                 ?>
 
-            <a href="<?php the_permalink() ?>">
-                <img src="<?php the_post_thumbnail_url(); ?>" width="250" height="250" alt="courses-custom-post-img" />
-            </a>
-
-
-            <?php
-                // Repeat the process and reset once it hits the limit
-                endwhile;
-                wp_reset_postdata();
-
-                ?>
-
-            <?php
+                <?php
                 get_footer();
                 ?>
+            </div>
         </div>
+
     </div>
 
-</div>
 
 
 <?php else : ?>
-<?php
+    <?php
     get_header();
     ?>
 
-<div class="row">
-    <div class="col-lg-12">
-        <div class="container-fluid text-center">
-            <h1 class="text-white">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="container-fluid text-center">
+                <h1 class="text-white">
+                    Uncategorized
+                </h1>
 
-            </h1>
+                <h2>
+                    <?php wp_list_categories(); ?>
+                </h2>
 
-            <h2>
-                <?php wp_list_categories(); ?>
-            </h2>
-
+            </div>
         </div>
-    </div>
-    <?php if (have_posts()) :
+        <?php if (have_posts()) :
             while (have_posts()) : the_post();
                 // Your loop code
         ?>
-    <div class="col-md-6 gx-5">
-        <h3 style="float:right;" class="text-white"><?php the_title(); ?></h3>
-        <a href="<?php the_permalink() ?>">
+                <div class="col-md-6 gx-5">
+                    <h3 style="float:right;" class="text-white"><?php the_title(); ?></h3>
+                    <a href="<?php the_permalink() ?>">
 
-            <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px"
-                src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
-            <small>
-                <em>
-                    <?php the_time('l, F jS, Y'); ?>
+                        <img class="img-fluid rounded-1 shadow-5-strong" style="max-height:150px; max-width:150px" src="<?php echo the_post_thumbnail_url('thumbnail') ?>" />
+                        <small>
+                            <em>
+                                <?php the_time('l, F jS, Y'); ?>
 
-                </em>
-            </small>
-        </a>
-    </div>
-    <?php endwhile;;
+                            </em>
+                        </small>
+                    </a>
+                </div>
+
+            <?php endwhile;;
+            wp_reset_postdata();
+
             ?>
-    <?php
-            get_footer();
-            ?>
-    <?php endif;
+        <?php endif;
         ?>
-</div>
-<?php endif; ?>
+        <?php
+        get_footer();
+        ?>
+    <?php endif;
+    ?>
+    </div>
