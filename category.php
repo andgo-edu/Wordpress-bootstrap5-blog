@@ -57,7 +57,7 @@ if (is_category('Courses')) : ?>
     <div class="col-lg-12">
         <div class="container-fluid text-center">
             <h1 class="text-white">
-                <?php wp_list_category(); ?>
+              
             </h1>
 
             <h2>
@@ -131,6 +131,7 @@ if (is_category('Courses')) : ?>
                     'post_type' => 'courses_post',
                     'style' => '',
                     'loading' => 'lazy',
+                    'category' => 'Security',
 
                 ));
                 while ($courses->have_posts()) : $courses->the_post();

@@ -27,8 +27,7 @@ a {
   text-decoration: none;
   list-style: none;
   list-style-type: none;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
